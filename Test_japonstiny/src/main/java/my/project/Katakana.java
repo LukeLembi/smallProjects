@@ -174,7 +174,9 @@ public class Katakana extends Hiragana {
             if (hodnota.equals(katakana.get(odpoved))) {
                 System.out.println("Správně");
                 spravne++;
-            } else System.out.println("Špatně");
+            } else {
+                System.out.println("Špatně");
+            }
         }
         System.out.println("Uhodl jsi správně: " +spravne +"/" +test);
     }

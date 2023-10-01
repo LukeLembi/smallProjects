@@ -1,8 +1,10 @@
 package my.project;
 
 // procvičování japonštiny
+//formátování výpisu se prozatím upravovat nebude
+//je potřeba vychytat "podvádění" v testu - prozatím se řešit nebude
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class Main {
@@ -44,14 +46,14 @@ public class Main {
                 System.out.println();
             }
             else if(status.equals("kandži")) { // doplnit testy ze čtení
-                System.out.println("Vyberte další možnost: \n\"Test\"\n\"Výpis\"");
+                System.out.println("Vyberte další možnost: \nTest \"Česky\" \nTest čtení \"Kun-jomi\" \nTest čtení \"On-jomi\"\n\"Výpis\" znaků");
                 status = scanner.nextLine().toLowerCase();
-                if (status.equals("test"))
-                    kandzi.testKandzi_cesky();
-                    //else if (status.equals("kun-jomi")
-                    //  kandzi.testKandzi_kunjomi();
-//                else if(status.equals.("on-jomi"))
-//                    kandzi.testKandzi_onjomi();
+                if (status.equals("česky"))
+                    kandzi.testCesky();
+                else if (status.equals("kun-jomi"))
+                    kandzi.testKunjomi();
+                else if(status.equals("on-jomi"))
+                    kandzi.testOnjomi();
                 else if(status.equals("výpis"))
                     kandzi.vypis(); // potřeba upravit formátování
                 System.out.println();

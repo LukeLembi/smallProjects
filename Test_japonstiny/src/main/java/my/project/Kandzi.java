@@ -134,7 +134,7 @@ public class Kandzi {
             System.out.println(poleKandzi[i]);
         }
     }
-    void testKandzi_cesky(){
+    void testCesky(){
         System.out.println("Z kolika znaků se chcete testovat?");
         int test = Integer.parseInt(scanner.nextLine());
         for(int i = 1; i <=test;i++) {
@@ -146,7 +146,49 @@ public class Kandzi {
             if (odpoved.contains(poleKandzi[index].cesky)) {
                 System.out.println("Správně");
                 spravne++;
-            } else System.out.println("Špatně");
+            } else {
+                System.out.println("Špatně");
+                System.out.printf("Správná odpověď: %s\t\t Tvá odpověď: %s\n",poleKandzi[index].cesky,odpoved );
+            }
+        }
+        System.out.println("Uhodl jsi správně: " +spravne +"/" +test);
+    }
+    void testKunjomi(){
+        System.out.println("Z kolika znaků se chcete testovat?");
+        int test = Integer.parseInt(scanner.nextLine());
+        for(int i = 1; i <=test;i++) {
+            int index = rand.nextInt(poleKandzi.length-1);
+            String hodnota = poleKandzi[index].znaky;
+            System.out.println(hodnota);
+            System.out.println("Jak se znak čte v Kun-jomi");
+            String odpoved = scanner.nextLine();
+            if (odpoved.contains(poleKandzi[index].cteniKun)) {
+                System.out.println("Správně");
+                spravne++;
+            } else {
+                System.out.println("Špatně");
+                System.out.printf("Správná odpověď: %s\t\t Tvá odpověď: %s\n",poleKandzi[index].cteniKun,odpoved );
+            }
+        }
+        System.out.println("Uhodl jsi správně: " +spravne +"/" +test);
+    }
+
+    void testOnjomi(){
+        System.out.println("Z kolika znaků se chcete testovat?");
+        int test = Integer.parseInt(scanner.nextLine());
+        for(int i = 1; i <=test;i++) {
+            int index = rand.nextInt(poleKandzi.length-1);
+            String hodnota = poleKandzi[index].znaky;
+            System.out.println(hodnota);
+            System.out.println("Jak se znak čte v Kun-jomi");
+            String odpoved = scanner.nextLine();
+            if (odpoved.contains(poleKandzi[index].cteniOn)) {
+                System.out.println("Správně");
+                spravne++;
+            } else {
+                System.out.println("Špatně");
+                System.out.printf("Správná odpověď: %s\t\t Tvá odpověď: %s\n",poleKandzi[index].cteniOn,odpoved );
+            }
         }
         System.out.println("Uhodl jsi správně: " +spravne +"/" +test);
     }

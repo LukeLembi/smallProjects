@@ -188,7 +188,9 @@ public class Hiragana {
             if (hodnota.equals(hiragana.get(odpoved))) {
                 System.out.println("Správně");
                 spravne++;
-            } else System.out.println("Špatně");
+            } else {
+                System.out.println("Špatně");
+            }
         }
         System.out.println("Uhodl jsi správně: " +spravne +"/" +test);
     }
